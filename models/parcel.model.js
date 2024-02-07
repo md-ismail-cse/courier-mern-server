@@ -13,7 +13,15 @@ const parcelSchema = mongoose.Schema({
     type: String,
     require: true,
   },
+  note: {
+    type: String,
+    require: true,
+  },
   weight: {
+    type: Number,
+    require: true,
+  },
+  length: {
     type: Number,
     require: true,
   },
@@ -56,6 +64,9 @@ const parcelSchema = mongoose.Schema({
     type: String,
     require: true,
   },
+  duration: {
+    type: Number,
+  },
   payment: {
     type: String,
   },
@@ -73,6 +84,13 @@ const parcelSchema = mongoose.Schema({
   dlvRiderID: {
     type: String,
     default: "NaN",
+  },
+  deliveryVerification: {
+    type: Boolean,
+    default: false,
+  },
+  deliveryOTP: {
+    type: Number,
   },
 });
 

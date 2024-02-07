@@ -20,9 +20,20 @@ const customerSchema = mongoose.Schema({
   phone: {
     type: String,
   },
+  gender: {
+    type: String,
+    require: true,
+  },
   address: {
     type: String,
     require: true,
+  },
+  emailVerification: {
+    type: Boolean,
+    default: false,
+  },
+  emailOTP: {
+    type: Number,
   },
   date: {
     type: Date,

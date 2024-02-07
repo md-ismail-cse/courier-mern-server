@@ -9,7 +9,9 @@ router.post("/", async (req, res) => {
       customerID: req.body.customerID,
       customerName: req.body.customerName,
       type: req.body.type,
+      note: req.body.note,
       weight: req.body.weight,
+      length: req.body.length,
       deliveryCost: req.body.deliveryCost,
       totalPrice: req.body.totalPrice,
       recName: req.body.recName,
@@ -18,6 +20,7 @@ router.post("/", async (req, res) => {
       recAddress: req.body.recAddress,
       sendLocation: req.body.sendLocation,
       endLocation: req.body.endLocation,
+      duration: req.body.duration,
       payment: req.body.payment,
     });
     await newParcel.save().then((data) => {
